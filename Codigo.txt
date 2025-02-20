@@ -1,0 +1,46 @@
+/* Guilherme Ribeiro 
+Programa: Farois cruzados
+Data:19/02/2024
+*/
+#define VermelhoEsquerdo 8
+#define AmareloEsquerdo 12
+#define VerdeEsquerdo 13
+#define VermelhoDireito 2
+#define AmareloDireito 4
+#define VerdeDireito 7
+#define Parar 5000
+#define segundos3 3000
+#define segundos2 2000
+void setup()
+{
+  pinMode(VermelhoEsquerdo, OUTPUT);
+  pinMode(AmareloEsquerdo, OUTPUT);
+  pinMode(VerdeEsquerdo, OUTPUT);
+  pinMode(VermelhoDireito, OUTPUT);
+  pinMode(AmareloDireito, OUTPUT);
+  pinMode(VerdeDireito, OUTPUT);
+  
+}
+void loop()
+{
+  digitalWrite(VermelhoEsquerdo,HIGH);
+  digitalWrite(VerdeDireito, HIGH);
+    delay(segundos3);
+  
+  digitalWrite(VerdeDireito, LOW);
+  digitalWrite(AmareloDireito, HIGH);
+    delay(segundos2) ;
+  
+  digitalWrite(VermelhoEsquerdo,LOW);
+  digitalWrite(VerdeEsquerdo,HIGH);
+  digitalWrite(AmareloDireito,LOW);
+  digitalWrite(VermelhoDireito,HIGH);
+    delay(segundos3);
+  
+  digitalWrite(AmareloDireito,LOW);
+  digitalWrite(VermelhoDireito,HIGH);
+  digitalWrite(VerdeEsquerdo,LOW);
+  digitalWrite(AmareloEsquerdo,HIGH);
+    delay(segundos2);
+  digitalWrite(AmareloEsquerdo,LOW);
+}
