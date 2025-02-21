@@ -43,4 +43,5 @@ void loop()
   digitalWrite(AmareloEsquerdo,HIGH);
     delay(segundos2);
   digitalWrite(AmareloEsquerdo,LOW);
+  digitlWrite(VermelhoDireito,LOW);
 }
